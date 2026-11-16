@@ -1,0 +1,140 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+/************************** BORDER BOX **************************/
+* {
+  box-sizing: border-box;
+}
+
+/************************** BODY **************************/
+body {
+  font-family: $font-family;
+  @include reset;
+}
+
+/************************** HEADER **************************/
+header {
+  padding: $gutter 0 $gutter $gutter;
+  display: grid;
+  grid-template-columns: 64px auto 44px;
+  column-gap: 16px;
+  align-items: end;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $color-primary;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  span {
+  font-size: 1.35rem;
+  color: white;
+  font-weight: $font-weight-heavy;
+  }
+}
+
+
+/************************** MAIN LAYOUT **************************/
+h1 {
+  font-size: 36pt;
+  color: $color-primary;
+  font-weight: $font-weight-heavy;
+  margin-left: $gutter;
+  margin-block-start: .5rem;
+  margin-block-end: .5rem;
+}
+
+h2 {
+  font-size: 28pt;
+  color: black;
+  font-weight: $font-weight-heavy;
+  margin-left: $gutter;
+  margin-block-start: .5rem;
+  margin-block-end: .5rem;
+}
+
+h3 {
+  font-size: 24pt;
+  color: black;
+  font-weight: $font-weight-semi-heavy;
+  margin-left: $gutter;
+  margin-block-start: .5rem;
+  margin-block-end: .5rem;
+}
+
+p {
+  font-size: 16pt;
+  color: black;
+  font-weight: $font-weight-normal;
+  margin-left: $gutter;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: $font-weight-semi-heavy;
+  margin-block-start: .5rem;
+  margin-block-end: .5rem;
+}
+
+.footertop {
+  display: block;
+  flex-wrap: wrap;
+}
+
+/************************** SOCIAL MEDIA **************************/
+.social {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+  margin-bottom: 1rem;
+
+  img {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+
+  a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: $color-trans-w70;
+    transition: background-color .3s ease-in-out;
+  }
+
+  a:hover {
+    background-color: $color-trans-w90;
+  }
+}
+
+.address {
+  color: white;
+}
+
+/************************** FOOTER **************************/
+footer {
+  background-color: $color-primary;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+
+a {
+  color: white;
+}
+  
+  p {
+    margin: 0.25rem;
+    font-size: 12pt;
+    font-weight: 300;
+    color: white;
+  }
+}
